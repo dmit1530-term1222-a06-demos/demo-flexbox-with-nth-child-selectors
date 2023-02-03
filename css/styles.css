@@ -1,0 +1,53 @@
+body {
+	background-color: #434a54;
+	color: white;
+	font-family: 'Noto Sans JP', sans-serif;
+	font-size: 100%; /** 100% = 16px = 1rem/em*/
+}
+
+h1 {
+	font-size: 3rem; /** desired size / default font-size = rem/em value **/
+	font-weight: 400;
+	padding-bottom: 1rem; /**16px**/
+	text-align: center;
+}
+
+p {
+	font-weight: 300;
+	margin-bottom: 2rem; /**32px*/
+	padding: 1rem;
+}
+
+section {
+	max-width: 67.5rem; /**1080/16**/
+	margin: 0 auto;
+	padding: 2rem;
+}
+.flex-row {
+	display: flex;
+	justify-content: space-between;
+	/* column-gap: 1rem; */
+}
+
+
+/*The calc() function allows us to not only mix-and-match our units of measurement, but it will also recalculate things as we resize the viewport, keeping our containers fluid / flexible. */
+.flex-row:nth-child(2) p {
+	width: calc(100% / 3 - 1rem);
+	background-color: crimson;
+}
+
+.flex-row:nth-child(3) p{
+	width: calc(100% / 2 - 1rem);
+	background-color: darkorange;
+}
+
+.flex-row:nth-child(4) p {
+	background-color: darkblue;
+}
+.flex-row:nth-child(odd) p {
+	background-color: cyan;
+}
+
+.flex-row:nth-child(even) p {
+	background-color: blueviolet;
+}
